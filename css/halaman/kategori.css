@@ -1,0 +1,57 @@
+/* Gaya khusus layar Kategori */
+
+/* ---------- Baris Status & Sortir ---------- */
+.baris-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -4px;
+  padding: 4px 0;
+}
+
+.baris-status__teks {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warna-teks-isi);
+}
+
+.pilihan-urut {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: var(--warna-tua);
+  font-weight: 700;
+}
+
+.pilihan-urut__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--warna-tua);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 18px 4px 4px;
+  outline: none;
+}
+
+.pilihan-urut__panah {
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  color: var(--warna-tua);
+}
+
+/* ---------- Pesan Kosong ---------- */
+.pesan-kosong__ikon {
+  color: var(--warna-utama);
+  margin-bottom: var(--jarak-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,147 @@
+/* Gaya khusus layar Pencarian Karya */
+
+/* ---------- Bidang Pencarian Input ---------- */
+.bidang-cari {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--warna-latar-lembut, #F8FAFC);
+  border: 1.5px solid #CFE3F1;
+  border-radius: var(--sudut-sedang);
+  padding: 0 var(--jarak-3);
+  height: 48px;
+  gap: var(--jarak-2);
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.bidang-cari:focus-within {
+  border-color: var(--warna-utama);
+  background: var(--warna-putih);
+  box-shadow: 0 0 0 3px rgba(1, 121, 187, 0.12);
+}
+
+.bidang-cari__ikon {
+  display: flex;
+  align-items: center;
+  color: var(--warna-utama);
+  flex-shrink: 0;
+}
+
+.bidang-cari__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--teks-isi);
+  color: var(--warna-teks);
+  outline: none;
+  min-width: 0;
+  padding: 0;
+}
+
+.bidang-cari__input::placeholder {
+  color: var(--warna-redup);
+}
+
+.bidang-cari__bersihkan {
+  border: none;
+  background: transparent;
+  color: var(--warna-redup);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--sudut-pil);
+}
+
+.bidang-cari__bersihkan:hover {
+  color: var(--warna-teks);
+}
+
+/* ---------- Chip Garis saat Aktif ---------- */
+.chip--garis[aria-pressed="true"] {
+  background: var(--warna-utama);
+  color: var(--warna-putih);
+  border-color: var(--warna-utama);
+}
+
+/* ---------- Judul Status Hasil ---------- */
+.cari-status {
+  margin-top: var(--jarak-1);
+}
+
+/* ---------- Daftar Hasil Baris Horizontal ---------- */
+.daftar-hasil {
+  display: flex;
+  flex-direction: column;
+}
+
+.baris-karya {
+  display: flex;
+  align-items: center;
+  gap: var(--jarak-3);
+  padding: var(--jarak-3) 0;
+  border-bottom: 1px solid var(--warna-garis);
+  text-decoration: none;
+  color: var(--warna-teks);
+  transition: background 0.15s ease;
+}
+
+.baris-karya:last-child {
+  border-bottom: none;
+}
+
+.baris-karya:hover {
+  opacity: 0.92;
+}
+
+.baris-karya__thumb {
+  width: 64px;
+  height: 52px;
+  border-radius: var(--sudut-sedang);
+  background: var(--kat-bg, var(--warna-latar));
+  color: var(--kat-fg, var(--warna-tua));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.baris-karya__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.baris-karya__judul {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--warna-teks);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.baris-karya__sub {
+  font-size: 13px;
+  color: var(--warna-redup);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Pesan Kosong ---------- */
+.pesan-kosong__ikon {
+  color: var(--warna-utama);
+  margin-bottom: var(--jarak-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
